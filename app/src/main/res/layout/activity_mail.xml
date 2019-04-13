@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mail">
+
+    <EditText
+        android:id="@+id/emails"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="-10dp"
+        android:layout_marginEnd="55dp"
+        android:background="@drawable/inp"
+        android:hint="aa@gmail.com,bb@g..."
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <EditText
+        android:id="@+id/cc"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/emails"
+        android:layout_alignEnd="@+id/emails"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/inp"
+        android:hint="aa@gmail.com,bb@g...."
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <EditText
+        android:id="@+id/bcc"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/cc"
+        android:layout_alignEnd="@+id/cc"
+        android:layout_marginTop="-10dp"
+        android:background="@drawable/inp"
+        android:hint="aa@gmail.com,bb@g...."
+        app:layout_constraintTop_toBottomOf="@+id/cc"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <EditText
+        android:id="@+id/subject"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/bcc"
+        android:layout_alignStart="@+id/bcc"
+        android:layout_alignEnd="@+id/bcc"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/inp"
+        android:hint="subject"
+        app:layout_constraintTop_toBottomOf="@+id/bcc"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <EditText
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="98dp"
+
+        android:layout_below="@+id/subject"
+        android:layout_alignStart="@+id/subject"
+        android:layout_alignEnd="@+id/subject"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/inp"
+        android:hint="body"
+        app:layout_constraintTop_toBottomOf="@+id/subject"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="55dp" />
+
+    <Button
+        android:id="@+id/send"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/but"
+        android:text="send"
+        android:textColor="#FFFFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintVertical_bias="0.238"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="161dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="146dp"
+        android:layout_height="33dp"
+        android:layout_alignStart="@+id/cc"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="25dp"
+        android:text="Emails" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="146dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/emails"
+        android:layout_alignStart="@+id/cc"
+        android:layout_marginTop="15dp"
+        android:text="EMAILS CC" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="146dp"
+        android:layout_height="33dp"
+        android:layout_below="@+id/cc"
+        android:layout_alignStart="@+id/cc"
+        android:layout_marginTop="15dp"
+        android:text="EMAILS BCC" />
+
+</RelativeLayout>
